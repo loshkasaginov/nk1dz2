@@ -1,0 +1,36 @@
+#---- 1
+
+def get_middle_letters(s):
+    le=len(s)
+    if le%2==0:
+        print(s[le//2-1]+s[le//2])
+    else:
+        print(s[le//2])
+
+#---- 2
+
+def ask():
+    s=0
+    b=-1
+    while b!=0:
+        b=int(input())
+        s+=b
+    print(s)
+
+#---- 3
+
+def mvp_dating(boys, girls):
+    if len(boys)!=len(girls):
+        print('Внимание, кто-то может остаться без пары!')
+    else:
+        boys=boys.sort()
+        girls=girls.sort()
+        print("идеальные пары:")
+        for i in range(len(boys)):
+            print(f'{boys[i]} и {girls[i]}')
+
+#---- 4
+
+def avg_temp_countries(countries_temperature):
+    for i in range (len(countries_temperature)):
+        print(f'{countries_temperature[i][0]} - {sum(countries_temperature)/len(countries_temperature)}')
